@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Vivian&#39;s Blog">
 <meta property="og:description" content="ES6的新特性let和constlet-块级作用域1.ES5中声明变量用var，ES6中用let声明变量，const声明常量。 2.在ES5中变量的作用域分为全局作用域和局部作用域，但是在ES6中新增了块级作用域。let的作用域是在声明变量最近的一对大括号内，var声明变量时是将变量添加到window下，而let不是。 1234567891011if(true)&amp;#123;       let i">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-06T13:58:33.158Z">
+<meta property="og:updated_time" content="2018-12-06T14:02:12.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6的新特性let和const">
 <meta name="twitter:description" content="ES6的新特性let和constlet-块级作用域1.ES5中声明变量用var，ES6中用let声明变量，const声明常量。 2.在ES5中变量的作用域分为全局作用域和局部作用域，但是在ES6中新增了块级作用域。let的作用域是在声明变量最近的一对大括号内，var声明变量时是将变量添加到window下，而let不是。 1234567891011if(true)&amp;#123;       let i">
@@ -170,6 +170,7 @@
         <h1 id="ES6的新特性let和const"><a href="#ES6的新特性let和const" class="headerlink" title="ES6的新特性let和const"></a>ES6的新特性let和const</h1><h2 id="let-块级作用域"><a href="#let-块级作用域" class="headerlink" title="let-块级作用域"></a>let-块级作用域</h2><p>1.ES5中声明变量用var，ES6中用let声明变量，const声明常量。</p>
 <p>2.在ES5中变量的作用域分为全局作用域和局部作用域，但是在ES6中新增了块级作用域。let的作用域是在声明变量最近的一对大括号内，var声明变量时是将变量添加到window下，而let不是。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if(true)&#123;</span><br><span class="line">       let i = 100;</span><br><span class="line">       console.warn(i); //100</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(i); //undefined</span><br><span class="line">   </span><br><span class="line">if(true)&#123;</span><br><span class="line">       var i = 100;</span><br><span class="line">       console.warn(i); //100</span><br><span class="line">   &#125;</span><br><span class="line">console.log(i); //100</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>3.在for循环遍历时适合使用let声明变量，来避免全局污染。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let globalValue = 100;</span><br><span class="line">   for(let i = 0; i &lt; 10 ;i++)&#123;</span><br><span class="line">       // i作用域</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(i); //i is not defined</span><br></pre></td></tr></table></figure>
 <h2 id="var和let的区别"><a href="#var和let的区别" class="headerlink" title="var和let的区别"></a>var和let的区别</h2><h3 id="重复声明"><a href="#重复声明" class="headerlink" title="重复声明"></a>重复声明</h3><p>var可以重复声明变量，而let则不可以。</p>
