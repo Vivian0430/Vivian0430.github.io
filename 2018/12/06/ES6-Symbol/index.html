@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript数据类型和类型检测 | Vivian&#39;s Blog</title>
+  <title>ES6的新特性Symbol | Vivian&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Symbol1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。 1234var a = Symbol(&amp;apos;第一个symbol的值&amp;apos;);var b = Symbol(&amp;apos;第二个symbol的值&amp;apos;);console.log(a === b);//falseconsole.log(a, b);//Symbol(第一个symbol的值)">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript数据类型和类型检测">
+<meta property="og:title" content="ES6的新特性Symbol">
 <meta property="og:url" content="http://yoursite.com/2018/12/06/ES6-Symbol/index.html">
 <meta property="og:site_name" content="Vivian&#39;s Blog">
 <meta property="og:description" content="Symbol1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。 1234var a = Symbol(&amp;apos;第一个symbol的值&amp;apos;);var b = Symbol(&amp;apos;第二个symbol的值&amp;apos;);console.log(a === b);//falseconsole.log(a, b);//Symbol(第一个symbol的值)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-06T12:44:30.700Z">
+<meta property="og:updated_time" content="2018-12-06T12:49:00.967Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript数据类型和类型检测">
+<meta name="twitter:title" content="ES6的新特性Symbol">
 <meta name="twitter:description" content="Symbol1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。 1234var a = Symbol(&amp;apos;第一个symbol的值&amp;apos;);var b = Symbol(&amp;apos;第二个symbol的值&amp;apos;);console.log(a === b);//falseconsole.log(a, b);//Symbol(第一个symbol的值)">
   
     <link rel="alternative" href="/atom.xml" title="Vivian&#39;s Blog" type="application/atom+xml">
@@ -154,7 +154,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript数据类型和类型检测
+      ES6的新特性Symbol
     </h1>
   
 
@@ -169,6 +169,7 @@
       
         <h1 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h1><p>1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = Symbol(&apos;第一个symbol的值&apos;);</span><br><span class="line">var b = Symbol(&apos;第二个symbol的值&apos;);</span><br><span class="line">console.log(a === b);//false</span><br><span class="line">console.log(a, b);//Symbol(第一个symbol的值) Symbol(第二个symbol的值)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>2.Symbol值通过Symbol函数生成</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let s = Symbol();</span><br><span class="line">console.log(typeof s);//&quot;symbol&quot;</span><br></pre></td></tr></table></figure>
 <p>4.相同参数的Symbol函数的返回值是不相等的。</p>
