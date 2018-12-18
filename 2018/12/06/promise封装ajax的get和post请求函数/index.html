@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ES6的新特性Symbol | Vivian&#39;s Blog</title>
+  <title>ES6新特性promise | Vivian&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Symbol1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。 1234var a = Symbol(&amp;apos;第一个symbol的值&amp;apos;);var b = Symbol(&amp;apos;第二个symbol的值&amp;apos;);console.log(a === b);//falseconsole.log(a, b);//Symbol(第一个symbol的值)">
+  <meta name="description" content="promise封装ajax的get和post请求函数">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6的新特性Symbol">
-<meta property="og:url" content="http://yoursite.com/2018/12/06/ES6-Symbol/index.html">
+<meta property="og:title" content="ES6新特性promise">
+<meta property="og:url" content="http://yoursite.com/2018/12/06/promise封装ajax的get和post请求函数/index.html">
 <meta property="og:site_name" content="Vivian&#39;s Blog">
-<meta property="og:description" content="Symbol1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。 1234var a = Symbol(&amp;apos;第一个symbol的值&amp;apos;);var b = Symbol(&amp;apos;第二个symbol的值&amp;apos;);console.log(a === b);//falseconsole.log(a, b);//Symbol(第一个symbol的值)">
+<meta property="og:description" content="promise封装ajax的get和post请求函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-06T12:52:38.000Z">
+<meta property="og:updated_time" content="2018-12-18T13:45:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6的新特性Symbol">
-<meta name="twitter:description" content="Symbol1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。 1234var a = Symbol(&amp;apos;第一个symbol的值&amp;apos;);var b = Symbol(&amp;apos;第二个symbol的值&amp;apos;);console.log(a === b);//falseconsole.log(a, b);//Symbol(第一个symbol的值)">
+<meta name="twitter:title" content="ES6新特性promise">
+<meta name="twitter:description" content="promise封装ajax的get和post请求函数">
   
     <link rel="alternative" href="/atom.xml" title="Vivian&#39;s Blog" type="application/atom+xml">
   
@@ -147,19 +147,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ES6-Symbol" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-promise封装ajax的get和post请求函数" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ES6的新特性Symbol
+      ES6新特性promise
     </h1>
   
 
         
-        <a href="/2018/12/06/ES6-Symbol/" class="archive-article-date">
+        <a href="/2018/12/06/promise封装ajax的get和post请求函数/" class="archive-article-date">
   	<time datetime="2018-12-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-06</time>
 </a>
         
@@ -167,21 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h1><p>1.Symbol是ES6引入的一种新的原始数据类型，表示独一无二的值，减少命名冲突。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = Symbol(&apos;第一个symbol的值&apos;);</span><br><span class="line">var b = Symbol(&apos;第二个symbol的值&apos;);</span><br><span class="line">console.log(a === b);//false</span><br><span class="line">console.log(a, b);//Symbol(第一个symbol的值) Symbol(第二个symbol的值)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>2.Symbol值通过Symbol函数生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let s = Symbol();</span><br><span class="line">console.log(typeof s);//&quot;symbol&quot;</span><br></pre></td></tr></table></figure>
-<p>4.相同参数的Symbol函数的返回值是不相等的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//无参数的情况</span><br><span class="line">let s1 = Symbol();</span><br><span class="line">let s2 = Symbol();</span><br><span class="line">s1 === s2;//false</span><br><span class="line">//有参数的情况</span><br><span class="line">let s1 = Symbol(&apos;foo&apos;);</span><br><span class="line">let s2 = Symbol(&apos;foo&apos;);</span><br><span class="line">s1 === s2 // false</span><br></pre></td></tr></table></figure>
-<p>5.Symbol.for</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = Symbol.for(&apos;keyA&apos;); // 创建一个Symbol的值</span><br><span class="line">var b = Symbol.for(&apos;keyA&apos;); // 存在，读取值</span><br><span class="line"></span><br><span class="line">console.log(a === b);//true</span><br></pre></td></tr></table></figure>
-<p>6.Symbol作为对象的属性名key（在ES5中key的值只能是字符串）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var keyA = Symbol.for(&apos;KeyA&apos;);</span><br><span class="line">    var person = &#123;</span><br><span class="line">        name:&apos;Rose&apos;,</span><br><span class="line">        age:18,</span><br><span class="line">        [keyA]:&apos;abc&apos;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    for(var key in person)&#123;     //for-in遍历对象，不能遍历对象中的Symbol类型属性</span><br><span class="line">        console.log(key , person[key]);</span><br><span class="line">    &#125;</span><br><span class="line">// name Rose</span><br><span class="line">// age 18</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> var keys = Object.getOwnPropertySymbols(person);  //遍历对象中的Symbol类型属性</span><br><span class="line"> console.log(keys);</span><br><span class="line">// [Symbol(keyA)]</span><br></pre></td></tr></table></figure>
-<p>7.Symbol 值不能与其他类型的值进行运算，不能进行字符串的拼接。</p>
-<p>8.Symbol可以转换为字符串类型和布尔类型，但是不能转换为数值类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let sym = Symbol();</span><br><span class="line">String(sym)</span><br><span class="line">Boolean(sym)</span><br></pre></td></tr></table></figure>
-
+        <h1 id="promise封装ajax的get和post请求函数"><a href="#promise封装ajax的get和post请求函数" class="headerlink" title="promise封装ajax的get和post请求函数"></a>promise封装ajax的get和post请求函数</h1><a id="more"></a>
       
 
       
@@ -250,7 +236,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/06/ES6-Symbol/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/06/promise封装ajax的get和post请求函数/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,18 +250,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/18/JavaScript常用设计模式详解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/06/ES6的新特性let和const/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScript常用设计模式详解
+          ES6的新特性let和const
         
       </div>
     </a>
   
   
-    <a href="/2018/12/06/ES6-promise对象/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ES6新特性promise</div>
+    <a href="/2018/12/03/数据类型和类型检测/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript数据类型和类型检测</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -302,7 +288,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Symbol"><span class="toc-number">1.</span> <span class="toc-text">Symbol</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#promise封装ajax的get和post请求函数"><span class="toc-number">1.</span> <span class="toc-text">promise封装ajax的get和post请求函数</span></a></li></ol>
                     </div>
                 </span>
             </div>
