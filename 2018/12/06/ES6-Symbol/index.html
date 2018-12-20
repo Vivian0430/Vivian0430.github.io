@@ -273,17 +273,17 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/18/JavaScript常用设计模式详解/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/12/06/ES6的新特性let和const/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JavaScript常用设计模式详解
+          ES6的新特性let和const
         
       </div>
     </a>
   
   
-    <a href="/2018/12/06/ES6-promise对象/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/12/06/promise封装ajax的get和post请求函数/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">ES6新特性promise</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -350,6 +350,28 @@
     </div>
   </div>
 </footer>
+
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+        
+});
+</script> 
     </div>
     <script>
 	var yiliaConfig = {
