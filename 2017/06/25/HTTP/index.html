@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>HTTP | Vivian&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.RESTfulREST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。  GETget方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。 POSTpost方法在Rest请求中主要用于添加资源，参">
+  <meta name="description" content="1.RESTfulREST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。  GETget方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。">
 <meta name="keywords" content="前端基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP">
 <meta property="og:url" content="http://yoursite.com/2017/06/25/HTTP/index.html">
 <meta property="og:site_name" content="Vivian&#39;s Blog">
-<meta property="og:description" content="1.RESTfulREST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。  GETget方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。 POSTpost方法在Rest请求中主要用于添加资源，参">
+<meta property="og:description" content="1.RESTfulREST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。  GETget方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="c:/Users/Administrator/Desktop/Front-end-basic-knowledge-master/assets/1549847260584.png">
-<meta property="og:updated_time" content="2019-02-23T04:33:28.000Z">
+<meta property="og:updated_time" content="2019-02-24T05:07:31.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP">
-<meta name="twitter:description" content="1.RESTfulREST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。  GETget方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。 POSTpost方法在Rest请求中主要用于添加资源，参">
+<meta name="twitter:description" content="1.RESTfulREST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。  GETget方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。">
 <meta name="twitter:image" content="c:/Users/Administrator/Desktop/Front-end-basic-knowledge-master/assets/1549847260584.png">
   
     <link rel="alternative" href="/atom.xml" title="Vivian&#39;s Blog" type="application/atom+xml">
@@ -185,10 +185,15 @@
     <div id="busuanzi_container_page_pv" style="font-size:16px;color:rgb(153,153,153);line-height:1.8em;">总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
         <h4 id="1-RESTful"><a href="#1-RESTful" class="headerlink" title="1.RESTful"></a>1.RESTful</h4><p>REST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。</p>
 <ul>
-<li>GET<br><br>get方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。<br>规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。</li>
-<li>POST<br><br>post方法在Rest请求中主要用于添加资源，参数信息存放在请求报文的消息体中相对安全，且可发送较大信息</li>
-<li>PUT<br><br>put方法在Rest中主要用于更新资源，因为大多数浏览器不支持put和delete，会自动将put和delete请求转化为get和post. 因此为了使用put和delete方法,<br>需要以post发送请求，在表单中使用隐藏域发送真正的请求。<br>put方法的参数是同post一样是存放在消息中的，同样具有安全性，可发送较大信息。<br>put方法是幂等的，对同一URL资源做出的同一数据的任意次put请求其对数据的改变都是一致的。</li>
-<li>DELETE<br><br>Delete在Rest请求中主要用于删除资源，因为大多数浏览器不支持put和delete，会自动将put和delete请求转化为get和post。<br>因此为了使用put和delete方法,需要以post发送请求，在表单中使用隐藏域发送真正的请求。<br>Delete方法的参数同post一样存放在消息体中,具有安全性，可发送较大信息 Delete方法是幂等的，不论对同一个资源进行多少次delete请求都不会破坏数据</li>
+<li><p>GET<br><br>get方法在Rest中主要用于获取资源，能够发送参数，不过有限制，且参数都会以?开头的形 式附加在URL尾部。<br>规范的get方法处理器应该是幂等的，也就是说对一个资源不论发送多少次get请求都不会更改数据或造成破坏。</p>
+<a id="more"></a>
+</li>
+<li><p>POST<br><br>post方法在Rest请求中主要用于添加资源，参数信息存放在请求报文的消息体中相对安全，且可发送较大信息</p>
+</li>
+<li><p>PUT<br><br>put方法在Rest中主要用于更新资源，因为大多数浏览器不支持put和delete，会自动将put和delete请求转化为get和post. 因此为了使用put和delete方法,<br>需要以post发送请求，在表单中使用隐藏域发送真正的请求。<br>put方法的参数是同post一样是存放在消息中的，同样具有安全性，可发送较大信息。<br>put方法是幂等的，对同一URL资源做出的同一数据的任意次put请求其对数据的改变都是一致的。</p>
+</li>
+<li><p>DELETE<br><br>Delete在Rest请求中主要用于删除资源，因为大多数浏览器不支持put和delete，会自动将put和delete请求转化为get和post。<br>因此为了使用put和delete方法,需要以post发送请求，在表单中使用隐藏域发送真正的请求。<br>Delete方法的参数同post一样存放在消息体中,具有安全性，可发送较大信息 Delete方法是幂等的，不论对同一个资源进行多少次delete请求都不会破坏数据</p>
+</li>
 </ul>
 <p><a href="https://blog.csdn.net/jnshu_it/article/details/80203696" target="_blank" rel="noopener">https://blog.csdn.net/jnshu_it/article/details/80203696</a></p>
 <h4 id="2-GET和POST的区别"><a href="#2-GET和POST的区别" class="headerlink" title="2.GET和POST的区别"></a>2.GET和POST的区别</h4><ul>
@@ -336,11 +341,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/01/面试题/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/07/使用Hexo和Git搭建个人博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          面试题
+          使用Hexo和Git搭建个人博客
         
       </div>
     </a>
@@ -490,19 +495,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -511,6 +512,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
               </li>
              
               <li class="article-tag-list-item">

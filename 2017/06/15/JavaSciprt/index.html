@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Vivian&#39;s Blog">
 <meta property="og:description" content="1.同源策略同源策略可防止 JavaScript 发起跨域请求。源被定义为 URI、主机名和端口号的组合。此策略可防止页面上的恶意脚本通过该页面的文档对象模型，访问另一个网页上的敏感数据。 2.跨域 原因 浏览器的同源策略导致了跨域 作用 用于隔离潜在恶意文件的重要安全机制 解决   jsonp ，允许 script 加载第三方资源 反向代理（nginx 服务内部配置 Access-Control">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T04:31:14.000Z">
+<meta property="og:updated_time" content="2019-02-24T05:07:58.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript">
 <meta name="twitter:description" content="1.同源策略同源策略可防止 JavaScript 发起跨域请求。源被定义为 URI、主机名和端口号的组合。此策略可防止页面上的恶意脚本通过该页面的文档对象模型，访问另一个网页上的敏感数据。 2.跨域 原因 浏览器的同源策略导致了跨域 作用 用于隔离潜在恶意文件的重要安全机制 解决   jsonp ，允许 script 加载第三方资源 反向代理（nginx 服务内部配置 Access-Control">
@@ -194,6 +194,7 @@
 <li>iframe 嵌套通讯，postmessage</li>
 </ol>
 <p><a href="https://zhuanlan.zhihu.com/p/41479807" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/41479807</a> <br><br><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener">跨域资源共享 CORS 阮一峰</a></p>
+<a id="more"></a>
 <h4 id="3-JSONP"><a href="#3-JSONP" class="headerlink" title="3.JSONP"></a>3.JSONP</h4><p>Jsonp 并不是一种数据格式，而 json 是一种数据格式，jsonp 是用来解决跨域获取数据的一种解决方案，具体是通过动态创建 script 标签，然后通过标签的 src 属性获取 js 文件中的 js 脚本，该脚本的内容是一个函数调用，参数就是服务器返回的数据，为了处理这些返回的数据，需要事先在页面定义好回调函数，本质上使用的并不是 ajax 技术</p>
 <p>这是我认为写得比较通俗易懂的一篇文章 直接转载过来<br><br><a href="https://blog.csdn.net/hansexploration/article/details/80314948" target="_blank" rel="noopener">https://blog.csdn.net/hansexploration/article/details/80314948</a></p>
 <h4 id="4-事件绑定的方式"><a href="#4-事件绑定的方式" class="headerlink" title="4.事件绑定的方式"></a>4.事件绑定的方式</h4><ul>
@@ -513,15 +514,15 @@
 <ol>
 <li>解决加载缓慢的第三方内容如图标和广告等的加载问题</li>
 <li>Security sandbox</li>
-<li>并行加载脚本<br>缺点：</li>
+<li>并行加载脚本<br> 缺点：</li>
 <li>iframe 会阻塞主页面的 Onload 事件</li>
 <li>即时内容为空，加载也需要时间</li>
 <li>没有语意</li>
 </ol>
 <h4 id="70-DOM-操作——怎样添加、移除、移动、复制、创建和查找节点"><a href="#70-DOM-操作——怎样添加、移除、移动、复制、创建和查找节点" class="headerlink" title="70.DOM 操作——怎样添加、移除、移动、复制、创建和查找节点"></a>70.DOM 操作——怎样添加、移除、移动、复制、创建和查找节点</h4><ol>
-<li>创建新节点<br>createDocumentFragment() // 创建一个 DOM 片段<br>createElement() // 创建一个具体的元素<br>createTextNode() // 创建一个文本节点</li>
-<li>添加、移除、替换、插入<br>appendChild()<br>removeChild()<br>replaceChild()<br>insertBefore() // 在已有的子节点前插入一个新的子节点</li>
-<li>查找<br>getElementsByTagName() // 通过标签名称<br>getElementsByName() // 通过元素的 Name 属性的值(IE 容错能力较强，会得到一个数组，<br>其中包括 id 等于 name 值的)<br>getElementById() // 通过元素 Id，唯一性</li>
+<li>创建新节点<br> createDocumentFragment() // 创建一个 DOM 片段<br> createElement() // 创建一个具体的元素<br> createTextNode() // 创建一个文本节点</li>
+<li>添加、移除、替换、插入<br> appendChild()<br> removeChild()<br> replaceChild()<br> insertBefore() // 在已有的子节点前插入一个新的子节点</li>
+<li>查找<br> getElementsByTagName() // 通过标签名称<br> getElementsByName() // 通过元素的 Name 属性的值(IE 容错能力较强，会得到一个数组，<br> 其中包括 id 等于 name 值的)<br> getElementById() // 通过元素 Id，唯一性</li>
 </ol>
 <h4 id="71-js-延迟加载的方式有哪些？"><a href="#71-js-延迟加载的方式有哪些？" class="headerlink" title="71.js 延迟加载的方式有哪些？"></a>71.js 延迟加载的方式有哪些？</h4><ol>
 <li>defer 和 async</li>
@@ -813,19 +814,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -834,6 +831,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
               </li>
              
               <li class="article-tag-list-item">

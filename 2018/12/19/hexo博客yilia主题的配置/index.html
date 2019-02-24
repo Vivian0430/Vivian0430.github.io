@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Vivian&#39;s Blog">
 <meta property="og:description" content="hexo博客yilia主题的配置主题github地址： https://github.com/litten/hexo-theme-yilia 配置缺失模块从GitHub上面clone下来主题之后，点开左下角的全部文章，是没有办法直接显示文章目录的，点开的模块里也有解决的方法，需要配置一些代码。 首先要调出cmd黑窗口，查看自己电脑里安装的node版本（npm会在安装node时自动安装），node下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-24T02:22:44.000Z">
+<meta property="og:updated_time" content="2019-02-24T05:06:43.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客yilia主题的配置">
 <meta name="twitter:description" content="hexo博客yilia主题的配置主题github地址： https://github.com/litten/hexo-theme-yilia 配置缺失模块从GitHub上面clone下来主题之后，点开左下角的全部文章，是没有办法直接显示文章目录的，点开的模块里也有解决的方法，需要配置一些代码。 首先要调出cmd黑窗口，查看自己电脑里安装的node版本（npm会在安装node时自动安装），node下">
@@ -187,9 +187,10 @@
 <p>然后在博客根目录下左键git bash 执行 npm i  hexo-generator-json-content –save</p>
 <p>最后在博客根目录找到_config.yml，不是themes文件夹，themes文件夹下也有一个但是是做其他相关配置的，随便找一个空位放下页面提示让你放的那一段代码。</p>
 <p>博客根目录git bash - hexo clean - hexo g - hexo d；预览效果的话用hexo g之后hexo s，开启服务器，然后本地输入localhost:4000就可以查看了，确认没问题再hexo d上传上去。</p>
+<a id="more"></a>
 <h3 id="调整css样式，颜色字体等"><a href="#调整css样式，颜色字体等" class="headerlink" title="调整css样式，颜色字体等"></a>调整css样式，颜色字体等</h3><p>emmm，yilia主题自带的颜色个人表示不是很喜欢，不是一个风格的，调这个样式还是花了很多时间的，直接F12用那个小箭头找到自己需要修改样式的元素，控制台那里element style点开就可以看见相关的样式设置了，右上角会有他的来源文件，yilia主题基本样式都是放在themes/yilia/source/main.0cf68a.css里面，用sublime打开直接ctrl +F查找关键词找到你要修改的部分按照自己喜欢的来改就可以了。</p>
 <h3 id="目录不显示文章标题，tags标签怎么加，文章截断"><a href="#目录不显示文章标题，tags标签怎么加，文章截断" class="headerlink" title="目录不显示文章标题，tags标签怎么加，文章截断"></a>目录不显示文章标题，tags标签怎么加，文章截断</h3><p>这个问题真的是困扰了我好久，因为不是在控制台里面生成的md文件，直接写好了放进src/_post文件夹里面上传上去的，这样比较方便，但是！！这样子点击所有文章出来的文章都没有标题，是空白，需要在md文件里面做一些配置，在md文件的最顶部写title，date，tags的信息，上面和下面的三个杠杠不能少，要注意用英文冒号。</p>
-<p>还有一个就是文章截断的问题，不然会默认在主页显示整篇的文章，在你的md文件中（右击记事本打开）需要做截断的地方加上“<a id="more"></a>”。</p>
+<p>还有一个就是文章截断的问题，不然会默认在主页显示整篇的文章，在你的md文件中（右击记事本打开）需要做截断的地方加上“<!-- more -->”。</p>
 
       
 
@@ -273,9 +274,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/12/19/win8 win10系统安装msi文件方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          win8 win10系统安装msi文件方法
+        
+      </div>
+    </a>
   
-    <a href="/2018/12/19/win8 win10系统安装msi文件方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">win8 win10系统安装msi文件方法</div>
+  
+    <a href="/2018/12/18/JavaScript常用设计模式详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript常用设计模式详解</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -418,19 +428,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -439,6 +445,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ES6的新特性四for-of | Vivian&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="特性四：for-of循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of案例案例一下面的代码让我们先回顾一下forEach的用法 1234let arr=[100,200,150,251];forEach(function(item,index)&amp;#123;    console.log(item,index);--------------&amp;gt;100,0 2">
+  <meta name="description" content="特性四：for-of循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of案例案例一">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6的新特性四for-of">
 <meta property="og:url" content="http://yoursite.com/2018/02/09/ES6的新特性四for-of/index.html">
 <meta property="og:site_name" content="Vivian&#39;s Blog">
-<meta property="og:description" content="特性四：for-of循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of案例案例一下面的代码让我们先回顾一下forEach的用法 1234let arr=[100,200,150,251];forEach(function(item,index)&amp;#123;    console.log(item,index);--------------&amp;gt;100,0 2">
+<meta property="og:description" content="特性四：for-of循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of案例案例一">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-23T03:58:02.000Z">
+<meta property="og:updated_time" content="2019-02-24T05:05:29.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6的新特性四for-of">
-<meta name="twitter:description" content="特性四：for-of循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of案例案例一下面的代码让我们先回顾一下forEach的用法 1234let arr=[100,200,150,251];forEach(function(item,index)&amp;#123;    console.log(item,index);--------------&amp;gt;100,0 2">
+<meta name="twitter:description" content="特性四：for-of循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of案例案例一">
   
     <link rel="alternative" href="/atom.xml" title="Vivian&#39;s Blog" type="application/atom+xml">
   
@@ -181,7 +181,8 @@
     <div class="article-entry" itemprop="articleBody">
       
     <div id="busuanzi_container_page_pv" style="font-size:16px;color:rgb(153,153,153);line-height:1.8em;">总阅读量<span id="busuanzi_value_page_pv"></span>次</div>
-        <h1 id="特性四：for-of"><a href="#特性四：for-of" class="headerlink" title="特性四：for-of"></a>特性四：for-of</h1><h4 id="循环数组：最基本的for循环，forEach-现在es6中新增了一个新的特性for-of"><a href="#循环数组：最基本的for循环，forEach-现在es6中新增了一个新的特性for-of" class="headerlink" title="循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of"></a>循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of</h4><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="案例一"><a href="#案例一" class="headerlink" title="案例一"></a>案例一</h3><p>下面的代码让我们先回顾一下forEach的用法</p>
+        <h1 id="特性四：for-of"><a href="#特性四：for-of" class="headerlink" title="特性四：for-of"></a>特性四：for-of</h1><h4 id="循环数组：最基本的for循环，forEach-现在es6中新增了一个新的特性for-of"><a href="#循环数组：最基本的for循环，forEach-现在es6中新增了一个新的特性for-of" class="headerlink" title="循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of"></a>循环数组：最基本的for循环，forEach,现在es6中新增了一个新的特性for-of</h4><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="案例一"><a href="#案例一" class="headerlink" title="案例一"></a>案例一</h3><a id="more"></a>
+<p>下面的代码让我们先回顾一下forEach的用法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr=[100,200,150,251];</span><br><span class="line">forEach(function(item,index)&#123;</span><br><span class="line">    console.log(item,index);--------------&gt;100,0 200,1  150,2  251,3</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="案列二"><a href="#案列二" class="headerlink" title="案列二"></a>案列二</h3><p>通过for-of的方法来实现这个功能</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = [100 , 200 , 300];</span><br><span class="line">for(let value of arr)&#123;</span><br><span class="line">    console.log(value);-----------&gt;100,200,300</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -425,19 +426,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -446,6 +443,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
               </li>
              
               <li class="article-tag-list-item">

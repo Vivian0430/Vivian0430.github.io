@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Vivian&#39;s Blog">
 <meta property="og:description" content="关于github的基本使用github是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名github。 github于2008年4月10日正式上线，除了git代码仓库托管及基本的 Web管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。目前，其注册用户已经超过350万，托管版本数量也是非常之多，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-24T02:21:12.000Z">
+<meta property="og:updated_time" content="2019-02-24T05:38:37.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于github的基本使用">
 <meta name="twitter:description" content="关于github的基本使用github是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名github。 github于2008年4月10日正式上线，除了git代码仓库托管及基本的 Web管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。目前，其注册用户已经超过350万，托管版本数量也是非常之多，">
@@ -184,6 +184,7 @@
         <h1 id="关于github的基本使用"><a href="#关于github的基本使用" class="headerlink" title="关于github的基本使用"></a>关于github的基本使用</h1><p>github是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名github。</p>
 <p>github于2008年4月10日正式上线，除了git代码仓库托管及基本的 Web管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（Gist）等功能。目前，其注册用户已经超过350万，托管版本数量也是非常之多，其中不乏知名开源项目 Ruby on Rails、jQuery、python 等。</p>
 <h2 id="环境配置（git-node-npm）"><a href="#环境配置（git-node-npm）" class="headerlink" title="环境配置（git node npm）"></a>环境配置（git node npm）</h2><p>首先我们需要在自己的电脑上面安装git，node以及npm，npm会在安装node时自动安装，node下载网址自行访问另一篇文章，git下载地址：<a href="https://git-scm.com" target="_blank" rel="noopener">https://git-scm.com</a>，在这里只进行一些基本的git操作和命令行语句（如果只是github的基本操作完全够用），如果想要学的更多，可以访问廖雪峰的git教程：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a>。</p>
+<a id="more"></a>
 <h2 id="上传github项目"><a href="#上传github项目" class="headerlink" title="上传github项目"></a>上传github项目</h2><h3 id="配置公钥"><a href="#配置公钥" class="headerlink" title="配置公钥"></a>配置公钥</h3><p>首先，需要创建我们自己的电脑和github上远程仓库的一个连接，本地Git仓库和Github仓库之间的传输是通过SSH加密的，所以连接时需要配置一下加密的公钥和密钥。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，没有就通过下面命令创建：</p>
 <p>直接在桌面右击-git bash，输入命令行语句   <strong>ssh-keygen -t rsa -C</strong> <strong>“注册github的邮箱地址”</strong></p>
 <p>然后在C:\Users\student（你的用户名）下会找到一个.ssh文件夹，点击进入，会有id_rsa和id_rsa.pub这两个文件，右击记事本打开id_rsa.pub，复制里面的全部内容，登录Github，找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key。至此，你的计算机和github账户就建立了一个连接，换电脑需要重新添加公钥。</p>
@@ -292,18 +293,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/19/win8 win10系统安装msi文件方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          win8 win10系统安装msi文件方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/18/JavaScript常用设计模式详解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JavaScript常用设计模式详解</div>
+    <a href="/2018/12/19/win8 win10系统安装msi文件方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">win8 win10系统安装msi文件方法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -446,19 +438,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -467,6 +455,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端基础</a>
               </li>
              
               <li class="article-tag-list-item">
